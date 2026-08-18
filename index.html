@@ -637,13 +637,13 @@
         </div>
         <div class="card warning">
           <div class="icon">IA</div>
-          <h3>Falta de Orquestación y Privacidad</h3>
-          <p>Las licencias Plus/Gratis usan datos para entrenamiento. Además, ChatGPT no puede vincular minutas, enviar alertas a Sentinel y actualizar Salesforce de forma coordinada en segundo plano.</p>
+          <h3>Licencias, Falta de Orquestación y Privacidad</h3>
+          <p>Las licencias Plus/Gratis usan datos para entrenamiento, por lo que deberia utilizarse la Licencia Enterprise para garantizar la seguridad de los datos. Además, ChatGPT no puede vincular minutas, enviar alertas y actualizar Salesforce de forma coordinada en segundo plano.</p>
         </div>
         <div class="card">
           <div class="icon">G</div>
           <h3>Autenticación y Field-Level Security</h3>
-          <p>Esta solución que ofrecemos usa Autenticación Dinámica OAuth 2.0 donde las consultas se ejecutan bajo el token individual de la sesión activa del usuario. Salesforce intercepta la solicitud y filtra los datos según las reglas de visibilidad y permisos de objeto/campo.</p>
+          <p>Esta solución que ofrecemos usa Autenticación Dinámica OAuth 2.0 donde las consultas se ejecutan bajo el token individual de la sesión activa del usuario. Salesforce intercepta la solicitud y filtra los datos según las reglas de visibilidad y permisos de objeto/campo para ese rol y usuario.</p>
         </div>
       </div>
     </section>
@@ -660,8 +660,8 @@
           <span class="tag">Opción nativa</span>
           <h3>Salesforce Agentforce</h3>
           <ul class="muted-list">
-            <li><strong>Ecosistema cerrado:</strong> La experiencia está limitada principalmente a la consola de Salesforce, lo que dificulta llevar la IA a donde el usuario realmente trabaja.</li>
-            <li><strong>Modelo de costos agresivo:</strong> El cobro por consumo (aprox. $2 USD por conversación) escala rápidamente, volviéndose prohibitivo ante un alto volumen de consultas.</li>
+            <li><strong>Ecosistema más cerrado:</strong> La experiencia está limitada principalmente a la consola de Salesforce, lo que dificulta llevar la IA a donde el usuario realmente trabaja. Aunque se puede llevar a canales como WhatsApp y Web, la implementacion suele llevar mas pasos.</li>
+            <li><strong>Modelo de costos agresivo:</strong> El cobro por consumo (aprox. $2 USD por conversación o $0.10 por acción ejecutada) escala rápidamente, volviéndose prohibitivo ante un alto volumen de consultas.</li>
             <li><strong>Orquestación externa compleja:</strong> Conectar Agentforce de forma nativa con sistemas heredados o herramientas ajenas a Salesforce suele requerir licencias middleware muy costosas (como MuleSoft).</li>
             <li><strong>Implementación más rígida:</strong> Exige una arquitectura de datos previa que hace más lento y complejo el proceso de salida a producción.</li>
             <li><strong>Auditoría "Caja Negra":</strong> El motor toma decisiones autónomas sin ofrecer visibilidad granular ni logs detallados sobre cómo llegó a esa conclusión.</li>
@@ -674,7 +674,7 @@
           <ul>
             <li><strong>Omnicanalidad real:</strong> Se adapta y despliega sin fricción en los canales que el equipo ya usa a diario, como WhatsApp, Slack, Teams o Web.</li>
             <li><strong>Conectividad ilimitada:</strong> Capacidad nativa para orquestar flujos sumando miles de herramientas externas (ERPs, bases de datos propias, Jira, correos, etc.) en un solo lugar.</li>
-            <li><strong>Costo operativo predecible:</strong> Modelo de infraestructura fija (aprox. $30/mes) más el costo real de los tokens, siendo inmensamente más económico y escalable.</li>
+            <li><strong>Costo operativo predecible:</strong> Modelo de infraestructura fija, más el costo real de los tokens (Mucho mas bajos que Agentforce), siendo inmensamente más económico y escalable.</li>
             <li><strong>Despliegue ágil:</strong> Implementación rápida y modular que permite validar y tener un MVP funcional a la brevedad.</li>
             <li><strong>Control y auditoría transparente:</strong> Trazabilidad total de cada paso y decisión del agente mediante logs detallados en la plataforma.</li>
           </ul>
@@ -770,7 +770,7 @@
              <span style="line-height: 1.6; color: var(--text);">La demo funciona mejor al expresar <strong>una sola intención</strong> usando la estructura:<br><br> <code style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 6px;">[Acción] + [Objeto] + [Nombre/Cantidad]</code><br><br><em style="color: var(--muted);">Ejemplo: "Muéstreme las 3 oportunidades de la empresa United Oil".</em></span>
           </div>
           <div class="demo-step" style="flex-direction: column; gap: 12px; background: linear-gradient(180deg,rgba(70,45,8,.2),rgba(15,43,85,.4)); border-color: rgba(245,158,11,.15);">
-             <strong style="color: var(--orange); font-size: 18px;">Límites de Arquitectura</strong>
+             <strong style="color: var(--orange); font-size: 18px;">Límites de Arquitectura para la DEMO</strong>
              <ul class="muted-list" style="margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
                <li><strong>Seguridad de Datos:</strong> Es una herramienta de solo lectura; no crea, edita ni elimina registros en Salesforce.</li>
                <li><strong>Control de Carga:</strong> Limitado a resultados predefinidos (5 a 10 registros) para prevenir saturación cognitiva y técnica.</li>
